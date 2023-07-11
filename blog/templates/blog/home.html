@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <h1>StoryHub</h1>
+    {% for posts in posts %}
+        <h2>{{ posts.title }}</h2>
+        <p>{{ posts.author }} on {{ posts.date_posted }}</p>
+        <p>{{ posts.content }}</p>
+    {% endfor %}
+{% endblock content %}
