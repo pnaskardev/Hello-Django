@@ -6,6 +6,7 @@
         <p>{{ posts.author }} on {{ posts.date_posted }}</p>
         <p>{{ posts.content }}</p> -->
         <article class="media content-section col-md-12">
+            <img class="rounded-circle article-img" src="{{ posts.author.profile.image.url }}">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" >
               <div class="col p-4 d-flex flex-column position-static">
                 <!-- <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong> -->
