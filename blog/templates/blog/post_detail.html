@@ -11,10 +11,12 @@
                 <h3 class="mb-0">{{ object.title }}</h3>
                 <div class="mb-1 text-body-secondary"> {{ object.date_posted}} </div>
                 <p class="card-text mb-auto">{{ object.content }}</p>
-                <!-- <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                  Continue reading
-                  <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-                </a> -->
+                {% if object.author == user %}
+                  <div>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1 w-50" href="{% url 'post-update' object.id %}">Update</a>
+                    <a class="btn btn-secondary btn-danger btn-sm mt-1 mb-1 w-50" href="{% url 'post-delete' object.id %}">Delete</a>
+                  </div>
+                {% endif %}
               </div>
             </div>
         </article>
